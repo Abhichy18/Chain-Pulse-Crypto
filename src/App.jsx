@@ -14,6 +14,7 @@ import PhilosophyAndStats from './components/PhilosophyAndStats';
 import Pricing from './components/Pricing';
 import FinalCTA from './components/FinalCTA';
 import WalletModal from './components/WalletModal';
+import ChatbotWidget from './components/ChatbotWidget';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -47,6 +48,7 @@ function App() {
       <CustomCursor />
       <Loader onComplete={() => setLoaded(true)} />
       <WalletModal isOpen={isWalletOpen} onClose={() => setIsWalletOpen(false)} />
+      <ChatbotWidget />
       
       {/* Main Content wrapped directly to body root, standard approach */}
       <main className="relative z-10 w-full overflow-x-hidden pt-32">
