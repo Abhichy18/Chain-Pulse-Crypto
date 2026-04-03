@@ -23,9 +23,24 @@ export default function NavBar({ onConnect }) {
       </div>
       
       <div className="hidden md:flex items-center space-x-8 text-sm font-medium text-offwhite/70">
-        <a href="#features" className="hover:text-acid transition-colors">Platform</a>
-        <a href="#philosophy" className="hover:text-acid transition-colors">Manifesto</a>
-        <a href="#pricing" className="hover:text-acid transition-colors">Access</a>
+        {[
+          { id: 'features', label: 'Platform' },
+          { id: 'philosophy', label: 'Manifesto' },
+          { id: 'testimonials', label: 'Testimonials' },
+          { id: 'pricing', label: 'Access' }
+        ].map((item) => (
+          <a
+            key={item.id}
+            href={`#${item.id}`}
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="hover:text-acid transition-colors pointer-events-auto cursor-pointer"
+          >
+            {item.label}
+          </a>
+        ))}
       </div>
       
       <MagneticButton 

@@ -106,10 +106,11 @@ export default function ChatbotWidget() {
       {isOpen && (
         <div 
           ref={chatWindowRef} 
-          className="mb-4 w-80 md:w-96 bg-[#0A0D08] border border-white/10 rounded-2xl shadow-[0_0_50px_rgba(0,0,0,0.5)] overflow-hidden flex flex-col pointer-events-auto"
+          className="mb-4 w-80 md:w-96 bg-[#0A0D08] border border-white/10 rounded-2xl shadow-[0_0_50px_rgba(0,0,0,0.5)] flex flex-col pointer-events-auto"
+          style={{ maxHeight: '600px', height: 'calc(100vh - 120px)' }}
         >
           {/* Header */}
-          <div className="bg-void border-b border-white/5 p-4 flex items-center justify-between">
+          <div className="bg-void border-b border-white/5 p-4 flex items-center justify-between rounded-t-2xl">
             <div className="flex items-center space-x-2">
               <TerminalSquare size={16} className="text-acid" />
               <span className="font-mono text-xs text-white uppercase tracking-widest">Oracle System</span>
@@ -120,7 +121,13 @@ export default function ChatbotWidget() {
           </div>
 
           {/* Messages */}
-          <div className="flex-1 h-80 p-4 overflow-y-auto space-y-4">
+          <div 
+            className="flex-1 min-h-0 p-4 overflow-y-auto space-y-4 overscroll-contain" 
+            data-lenis-prevent="true"
+            data-lenis-prevent-wheel="true"
+            onWheel={(e) => e.stopPropagation()}
+            onTouchMove={(e) => e.stopPropagation()}
+          >
             {messages.map((msg, i) => (
               <div key={i} className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
                 <div className={`max-w-[85%] p-3 rounded-lg text-sm font-sans ${
@@ -147,7 +154,7 @@ export default function ChatbotWidget() {
           </div>
 
           {/* Input */}
-          <form onSubmit={handleSend} className="p-3 bg-void border-t border-white/5 flex items-center space-x-2">
+          <form onSubmit={handleSend} className="p-3 bg-void border-t border-white/5 flex items-center space-x-2 rounded-b-2xl shrink-0">
             <input 
               type="text" 
               value={inputMessage}

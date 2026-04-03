@@ -15,10 +15,12 @@ export default function Hero({ loaded, onConnect }) {
     
     let ctx = gsap.context(() => {
       const elements = containerRef.current.querySelectorAll('.hero-anim');
+      const numbers = containerRef.current.querySelectorAll('.tick-num');
       
       if (prefersReducedMotion) {
         gsap.set(elements, { opacity: 1, y: 0 });
         gsap.set('.hero-canvas', { opacity: 1 });
+        numbers.forEach(el => gsap.set(el, { innerHTML: el.getAttribute('data-value') }));
       } else {
         gsap.fromTo(elements, 
           { opacity: 0, y: 50 },
@@ -36,6 +38,23 @@ export default function Hero({ loaded, onConnect }) {
           { opacity: 0 },
           { opacity: 1, duration: 1.5, delay: 0.4, ease: 'power2.inOut' }
         );
+
+        // Micro-interaction data ticker animations
+        numbers.forEach((num) => {
+            const end = parseInt(num.getAttribute('data-value'), 10);
+            const start = parseInt(num.getAttribute('data-start') || '0', 10);
+            const dur = parseFloat(num.getAttribute('data-dur') || '2.5');
+            gsap.fromTo(num, 
+              { innerHTML: start }, 
+              {
+                innerHTML: end,
+                duration: dur,
+                delay: 0.8, // Wait for intro sequence basically
+                ease: "power2.out",
+                snap: { innerHTML: 1 }
+              }
+            );
+        });
       }
     }, containerRef);
     
@@ -55,7 +74,7 @@ export default function Hero({ loaded, onConnect }) {
       <div className="relative z-10 max-w-4xl text-left pointer-events-auto">
         <div className="hero-anim text-electric font-mono text-xs md:text-sm tracking-[0.2em] uppercase mb-6 flex items-center space-x-3 opacity-0">
           <span className="w-2 h-2 bg-electric rounded-full animate-pulse shadow-[0_0_10px_#00FF87]" />
-          <span>System Online • 0ms Latency</span>
+          <span>System Online • <span className="tick-num inline-block w-4 text-center" data-start="999" data-value="0" data-dur="1.5">999</span>ms Latency</span>
         </div>
         
         <h1 className="hero-anim text-[clamp(2.5rem,6vw,6rem)] leading-[1.1] font-display font-extrabold text-white mb-2 opacity-0 tracking-tight">
@@ -77,7 +96,7 @@ export default function Hero({ loaded, onConnect }) {
           >
             Connect your wallet
           </MagneticButton>
-          <span className="block mt-4 text-offwhite/40 font-mono text-xs pl-4">{"//"} live in 60 seconds</span>
+          <span className="block mt-4 text-offwhite/40 font-mono text-xs pl-4">{"//"} live in <span className="tick-num inline-block" data-value="60">0</span> seconds</span>
         </div>
       </div>
     </section>

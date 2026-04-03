@@ -16,6 +16,7 @@ import FinalCTA from './components/FinalCTA';
 import WalletModal from './components/WalletModal';
 import ChatbotWidget from './components/ChatbotWidget';
 import SplineBackground from './components/SplineBackground';
+import StaggerTestimonials from './components/ui/stagger-testimonials';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -61,6 +62,7 @@ function App() {
         <SocialProofBar />
         <Features />
         <HowItWorks />
+        <StaggerTestimonials />
         <PhilosophyAndStats />
         <Pricing onConnect={() => setIsWalletOpen(true)} />
         <FinalCTA onConnect={() => setIsWalletOpen(true)} />
