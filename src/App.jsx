@@ -15,6 +15,7 @@ import Pricing from './components/Pricing';
 import FinalCTA from './components/FinalCTA';
 import WalletModal from './components/WalletModal';
 import ChatbotWidget from './components/ChatbotWidget';
+import SplineBackground from './components/SplineBackground';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -50,6 +51,8 @@ function App() {
       <WalletModal isOpen={isWalletOpen} onClose={() => setIsWalletOpen(false)} />
       <ChatbotWidget />
       
+      <SplineBackground />
+
       {/* Main Content wrapped directly to body root, standard approach */}
       <main className="relative z-10 w-full overflow-x-hidden pt-32">
         <NavBar onConnect={() => setIsWalletOpen(true)} />
