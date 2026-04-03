@@ -73,8 +73,6 @@ export default function FinalCTA({ onConnect }) {
             <div className="flex flex-col space-y-5">
               <span className="text-white/80 font-mono text-[10px] tracking-widest uppercase">Company</span>
               <a href="#philosophy" className="text-offwhite/50 hover:text-acid font-sans text-sm transition-colors magnetic inline-block origin-left w-fit cursor-none">Manifesto</a>
-              <a href="#" className="text-offwhite/50 hover:text-acid font-sans text-sm transition-colors magnetic inline-block origin-left w-fit cursor-none">Twitter / X</a>
-              <a href="#" className="text-offwhite/50 hover:text-acid font-sans text-sm transition-colors magnetic inline-block origin-left w-fit cursor-none">Discord</a>
             </div>
           </div>
         </div>
@@ -84,9 +82,56 @@ export default function FinalCTA({ onConnect }) {
             © {new Date().getFullYear()} ChainPulse. Built for the grid.
           </div>
           
-          <div className="flex items-center space-x-3 bg-void/50 px-4 py-2 rounded-full border border-white/5 shadow-inner">
-            <span className="w-2 h-2 bg-electric rounded-full animate-pulse shadow-[0_0_8px_#00FF87]" />
-            <span className="text-electric font-mono text-[10px] tracking-widest uppercase">System Operational</span>
+          <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-4 px-4">
+              <a 
+                href="https://github.com/Abhichy18" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                title="GitHub"
+                className="text-offwhite/50 hover:text-acid transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_8px_#00FF87] p-2 magnetic cursor-none"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                </svg>
+              </a>
+              <a 
+                href="https://www.linkedin.com/in/abhishek-choudhary18/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                title="Connect on LinkedIn"
+                className="text-offwhite/50 hover:text-acid transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_8px_#00FF87] p-2 magnetic cursor-none"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                  <rect width="4" height="12" x="2" y="9" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </a>
+            </div>
+
+            <div className="flex items-center space-x-3 bg-void/50 px-4 py-2 rounded-full border border-white/5 shadow-inner">
+              <span className="w-2 h-2 bg-electric rounded-full animate-pulse shadow-[0_0_8px_#00FF87]" />
+              <span className="text-electric font-mono text-[10px] tracking-widest uppercase">System Operational</span>
+            </div>
           </div>
         </div>
       </footer>
