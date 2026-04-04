@@ -13,6 +13,7 @@
     <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind" />
     <img src="https://img.shields.io/badge/THREE.js-000000?style=for-the-badge&logo=three.js&logoColor=white" alt="ThreeJS" />
     <img src="https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=white" alt="GSAP" />
+    <img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge" alt="MIT License" />
   </p>
 
   <h3>
