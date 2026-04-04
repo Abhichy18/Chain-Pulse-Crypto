@@ -116,6 +116,16 @@ chainpulse/
 - [ ] Replace placeholder API routes in the Oracle Chatbot with direct OpenAI/Anthropic stream connections.
 - [ ] Implement fully dynamic real-time price feeds in the stats blocks.
 
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/Abhichy118/Chain-Pulse-Crypto/issues).
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
 ## 🧑‍💻 Author
 - **Name:** Abhishek Choudhary  
 - **GitHub:** [https://github.com/Abhichy18](https://github.com/Abhichy18)  
