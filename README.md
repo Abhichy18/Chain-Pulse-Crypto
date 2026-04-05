@@ -132,5 +132,8 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 - **GitHub:** [https://github.com/Abhichy18](https://github.com/Abhichy18)  
 - **LinkedIn:** [https://www.linkedin.com/in/abhishek-choudhary18/](https://www.linkedin.com/in/abhishek-choudhary18/)
 
+## 🤝 Collaborators
+- **Daksh Maan**: [https://github.com/Daksh-cpu](https://github.com/Daksh-cpu)
+
 ---
 <p align="center">Designed and engineered as a showcase of what modern interactive Web3 frontend development can look like when UI meets raw physics.</p>
